@@ -1,0 +1,9 @@
+#
+# Development and integration test requirements
+#
+
+pip>=20
+invoke==1.4.1
+rituals==0.4.1
+cookiecutter==1.7.0
+pip-upgrader==1.4.15
