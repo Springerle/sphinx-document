@@ -11,3 +11,9 @@ a standalone Sphinx document for specifications, architecture documentation, etc
  * Support for Linux, MacOS, and Windows.
  * Watchdog / live-reload for a frictionless authoring experience.
  * Preconfigured extensions for graphs, diagrams, and charts.
+
+
+## Related Projects
+
+* [Diagrams as Code](https://github.com/jhermann/jhermann.github.io/wiki/Diagrams-as-Code) – Wiki page that collects tools for creating visuals that are based on textual representations.
+* [Crashedmind/docdac](https://github.com/Crashedmind/docdac#readme) –  Documentation-Of-Code / Documentation-As-Code.
