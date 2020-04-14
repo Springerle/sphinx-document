@@ -48,7 +48,7 @@ Alternatively, to get an *isolated* setup that can be easily uninstalled, use th
 .. code:: sh
 
     # Install into "~/.local/share/dephell/venvs/" and "~/.local/bin/"
-    curl -L dephell.org/install | python3
+    curl -L dephell.org/install | python3  # skip if you already have 'dephell'
     dephell jail install tox tox-venv
 
 In either case, check for a successful installation by calling ``tox --version``.
