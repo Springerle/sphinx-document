@@ -13,6 +13,7 @@ import os
 import re
 import sys
 
+sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
 from setup import project as meta
 on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 if not on_rtd:
@@ -26,10 +27,8 @@ needs_sphinx = '1.3'
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
 extensions = [
-    'sphinx.ext.autodoc', 'sphinx.ext.todo', 'sphinx.ext.coverage',
-    'sphinx.ext.ifconfig', 'sphinx.ext.viewcode', 'sphinx.ext.napoleon',
-    'sphinx.ext.intersphinx',
-    'sphinx.ext.graphviz',
+    'sphinx.ext.todo', 'sphinx.ext.ifconfig', 'sphinx.ext.viewcode',
+    'sphinx.ext.intersphinx', 'sphinx.ext.graphviz',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -70,7 +69,7 @@ today_fmt = '%Y-%m-%d'
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 exclude_patterns = [
-    "*~", "README.rst",
+    "*~", "README.rst", ".tox/*", ".git/*",
 ]
 
 # The reST default role (used for this markup: `text`) to use for all documents.
