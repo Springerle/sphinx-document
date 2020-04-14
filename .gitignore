@@ -60,6 +60,6 @@ target/
 # Jekyll
 _site/
 
-# py-generic-project
+# project
 .venv/
-new-project/
+new-document/
