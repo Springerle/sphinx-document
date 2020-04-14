@@ -9,6 +9,7 @@ a standalone Sphinx document for specifications, architecture documentation, etc
 ## Features
 
  * Support for Linux, MacOS, and Windows.
+ * Environment management and command automation using ``tox``.
  * Watchdog / live-reload for a frictionless authoring experience.
  * Preconfigured extensions for graphs, diagrams, and charts.
 
