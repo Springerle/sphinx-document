@@ -39,4 +39,5 @@ def test(ctx):
     ctx.run("rm -rf new-document ; cookiecutter --no-input .")
     with pushd('new-document'):
         assert os.path.exists('index.rst'), "document index is missing!"
-        ctx.run("tox")
+        ctx.run("tox -e docs")
+        assert os.path.exists('build/_html/index.html'), "HTML index is missing!"

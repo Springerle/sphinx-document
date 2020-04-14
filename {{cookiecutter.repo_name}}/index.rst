@@ -11,7 +11,7 @@
 
 This is a `Sphinx document`_ that will contain something you want to write about.
 
-{{ cookiecutter.short_description }}
+{{ cookiecutter.short_description }}.
 
 .. _`Sphinx document`: https://github.com/Springerle/sphinx-document#readme
 
