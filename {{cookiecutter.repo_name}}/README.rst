@@ -54,13 +54,24 @@ Alternatively, to get an *isolated* setup that can be easily uninstalled, use th
 In either case, check for a successful installation by calling ``tox --version``.
 
 
-.. not-yet
+Starting a Live-Reload Watchdog
+-------------------------------
 
-    The last command **starts a watchdog that auto-rebuilds documentation** and reloads the
-    opened browser tab on any change in your editor, when you save the text.
+For a nicer user experience, you can also start a watchdog
+that auto-rebuilds documentation and reloads the opened browser tab
+on any change in your editor, when you save the text.
 
-    Call ``invoke docs -k`` to **kill the watchdog process.**
+Just call ``tox -e live`` to start a new watchdog daemon
+and wait for your browser to open the rendered HTML page.
 
+To change the port of the webserver that is started in the background,
+set the ``SPHINX_AUTOBUILD_PORT`` variable like this:
+
+.. code:: sh
+
+    export SPHINX_AUTOBUILD_PORT=8042
+
+The default port is ``8880``.
 
 .. _`Sphinx document`: https://github.com/Springerle/sphinx-document#readme
 .. _releases: {{ cookiecutter.github_url }}/releases
