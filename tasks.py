@@ -11,6 +11,8 @@ import os
 import sys
 import shlex
 import shutil
+import subprocess
+from pathlib import Path
 from contextlib import contextmanager
 
 from invoke import *
@@ -36,8 +38,9 @@ def pushd(path):
 @task
 def test(ctx):
     """Perform integration tests."""
-    ctx.run("rm -rf new-document ; cookiecutter --no-input .")
+    Path("new-document").exists() and shutil.rmtree("new-document")
+    subprocess.check_call([sys.executable, "-m", "cookiecutter", "--no-input", "."])
     with pushd('new-document'):
         assert os.path.exists('index.rst'), "document index is missing!"
-        ctx.run("tox -e docs")
+        subprocess.check_call([sys.executable, "-m", "tox", "-e", "docs"])
         assert os.path.exists('build/_html/index.html'), "HTML index is missing!"
