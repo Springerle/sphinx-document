@@ -21,6 +21,9 @@ from invoke import *
 #from rituals.acts.documentation import namespace as _docs
 
 
+SPHINX_AUTOBUILD_PORT = os.environ.get("SPHINX_AUTOBUILD_PORT", "8880")
+
+
 @contextmanager
 def pushd(path):
     """ A context that enters a given directory and restores the old state on exit.
@@ -38,7 +41,7 @@ def pushd(path):
 @task
 def test(ctx):
     """Perform integration tests."""
-    subprocess.check_call(["bash", "-c", "fuser -uk 8880/tcp 2>/dev/null"
+    subprocess.check_call(["bash", "-c", "fuser -uk " + SPHINX_AUTOBUILD_PORT + "/tcp 2>/dev/null"
 	" || kill $(ps auxwww | egrep sphinx[-]autobuild | awk '{print $1;}') 2>/dev/null"
 	" || :"])
     Path("new-document").exists() and shutil.rmtree("new-document")
