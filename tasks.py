@@ -38,6 +38,9 @@ def pushd(path):
 @task
 def test(ctx):
     """Perform integration tests."""
+    subprocess.check_call(["bash", "-c", "fuser -uk 8880/tcp 2>/dev/null"
+	" || kill $(ps auxwww | egrep sphinx[-]autobuild | awk '{print $1;}') 2>/dev/null"
+	" || :"])
     Path("new-document").exists() and shutil.rmtree("new-document")
     subprocess.check_call([sys.executable, "-m", "cookiecutter", "--no-input", "."])
     with pushd('new-document'):
