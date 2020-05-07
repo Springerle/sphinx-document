@@ -37,7 +37,7 @@ For this to work, you might also need to follow some `setup procedures`_
 to make the necessary basic commands available on *Linux*, *Mac OS X*,
 and *Windows*. On Windows, use either WSL or ‘git bash’ (MingW).
 
-Also, the ``tox`` tool is expected on your ``PATH``, the simplest way to install it is this:
+Also, the ``tox`` tool is expected on your ``PATH``, the simplest but not best way to install it is this:
 
 .. code:: sh
 
@@ -73,7 +73,44 @@ set the ``SPHINX_AUTOBUILD_PORT`` variable like this:
 
 The default port is ``8880``.
 
+
+Extension Setup Procedures
+--------------------------
+
+For some Sphinx extensions you have to set up the tools they're based upon.
+
+sphinx.ext.graphviz
+~~~~~~~~~~~~~~~~~~~
+
+On Debian or Ubuntu Linux, install the ``graphviz`` package:
+
+.. code:: sh
+
+    apt install graphviz
+
+Other distributions have similar packages, use your native package manager to install.
+
+On macOS, use the `GraphViz Homebrew Formula`_.
+
+On Windows, download one of the `GraphViz Windows packages`_, and add the installation
+directory to the ``PATH`` after installing or unpacking.
+
+
+sphinxcontrib.plantuml
+~~~~~~~~~~~~~~~~~~~~~~
+
+To install PlantUML, use these commands after you `downloaded plantuml.jar`_:
+
+.. code:: sh
+
+    mkdir -p ~/.local/share/java
+    mv ~/Downloads/plantuml.jar $_
+
+
 .. _`Sphinx document`: https://github.com/Springerle/sphinx-document#readme
 .. _releases: {{ cookiecutter.github_url }}/releases
 .. _setup procedures: https://py-generic-project.readthedocs.io/en/latest/installing.html#quick-setup
 .. _PyInvoke: http://www.pyinvoke.org/
+.. _`downloaded plantuml.jar`: https://plantuml.com/download
+.. _`GraphViz Windows packages`: https://graphviz.gitlab.io/_pages/Download/Download_windows.html
+.. _`GraphViz Homebrew Formula`: https://formulae.brew.sh/formula/graphviz
