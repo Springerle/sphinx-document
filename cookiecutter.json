@@ -1,13 +1,14 @@
 {
     "full_name": "Joe Schmoe"
-  , "github_username": "{{ (cookiecutter.full_name[0] + cookiecutter.full_name.split(None, 1)[1]) | lower | replace(' ', '') }}"
-  , "email": "{{ cookiecutter.github_username }}@example.com"
+  , "git_username": "{{ (cookiecutter.full_name[0] + cookiecutter.full_name.split(None, 1)[1]) | lower | replace(' ', '') }}"
+  , "email": "{{ cookiecutter.git_username }}@example.com"
   , "project_name": "New Document"
   , "repo_name": "{{ cookiecutter.project_name | lower | replace(' ', '-') }}"
   , "version": "0.1"
   , "year": "2020"
   , "license": "CC-BY-SA-4.0"
-  , "github_url": "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}"
+  , "git_url": "https://github.com/"
+  , "repo_url": "{{ cookiecutter.git_url }}{{ cookiecutter.git_username }}/{{ cookiecutter.repo_name }}"
   , "document_title": "A new Sphinx document"
   , "short_description": "{{ cookiecutter.document_title }}"
 }

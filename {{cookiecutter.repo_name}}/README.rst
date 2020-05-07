@@ -5,7 +5,7 @@
 
 .. contents:: **Contents**
 
-:Repository:    {{ cookiecutter.github_url }}#readme
+:Repository:    {{ cookiecutter.repo_url }}#readme
 
 
 Overview
@@ -26,7 +26,7 @@ As a contributing author, to **create a working directory** for this document, c
 
 .. code:: sh
 
-    git clone "{{ cookiecutter.github_url }}.git"
+    git clone "{{ cookiecutter.repo_url }}.git"
     cd "{{ cookiecutter.repo_name }}"
     tox -e docs
 
@@ -108,7 +108,7 @@ To install PlantUML, use these commands after you `downloaded plantuml.jar`_:
 
 
 .. _`Sphinx document`: https://github.com/Springerle/sphinx-document#readme
-.. _releases: {{ cookiecutter.github_url }}/releases
+.. _releases: {{ cookiecutter.repo_url }}/releases
 .. _setup procedures: https://py-generic-project.readthedocs.io/en/latest/installing.html#quick-setup
 .. _PyInvoke: http://www.pyinvoke.org/
 .. _`downloaded plantuml.jar`: https://plantuml.com/download

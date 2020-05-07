@@ -7,7 +7,7 @@ project = dict(
     author_email='{{ cookiecutter.email }}',
     license='{{ cookiecutter.license }}',
     packages = [],
-    url='{{ cookiecutter.github_url }}#readme',
+    url='{{ cookiecutter.repo_url }}#readme',
     description='{{ cookiecutter.short_description }}',
 )
 
