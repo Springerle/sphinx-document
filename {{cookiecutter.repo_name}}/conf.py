@@ -28,7 +28,9 @@ needs_sphinx = '1.3'
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
 extensions = [
     'sphinx.ext.todo', 'sphinx.ext.ifconfig', 'sphinx.ext.viewcode',
-    'sphinx.ext.intersphinx', 'sphinx.ext.graphviz',
+    'sphinx.ext.intersphinx',
+    'sphinx.ext.graphviz',
+    'sphinxcontrib.plantuml',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -179,3 +181,7 @@ htmlhelp_basename = project + 'doc'
 
 # -- GraphViz configuration ----------------------------------------------
 graphviz_output_format = 'svg'
+
+# -- PlantUML configuration ----------------------------------------------
+plantuml = os.path.expandvars('java -jar ${HOME}/.local/share/java/plantuml.jar')
+plantuml_output_format = 'svg'

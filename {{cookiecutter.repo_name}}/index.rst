@@ -71,5 +71,15 @@ and thus node labels become clickable hyperlinks -- try it out below.
          svg_file -> html_files [style=dashed];
      }
 
+For various UML diagrams, use the `sphinxcontrib.plantuml extension`_.
+
+.. uml::
+    :caption: UML Diagram
+    :align: center
+
+    Alice -> Bob: Hi!
+    Alice <- Bob: How are you?
+
 
 .. _`sphinx.ext.graphviz extension`: https://www.sphinx-doc.org/en/master/usage/extensions/graphviz.html
+.. _`sphinxcontrib.plantuml extension`: https://github.com/sphinx-contrib/plantuml/#readme

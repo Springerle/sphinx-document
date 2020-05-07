@@ -5,3 +5,5 @@
 Sphinx==3.0.1
 sphinx-autobuild==0.7.1
 sphinx-rtd-theme==0.4.3
+
+sphinxcontrib-plantuml==0.18
