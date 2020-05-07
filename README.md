@@ -10,7 +10,7 @@ a standalone Sphinx document for specifications, architecture documentation, etc
 
  * :heavy_check_mark: Support for Linux, MacOS, and Windows.
  * :heavy_check_mark: Environment management and command automation using ``tox``.
- * Watchdog / live-reload for a frictionless authoring experience.
+ * :heavy_check_mark: Watchdog / live-reload for a frictionless authoring experience.
  * :construction: Preconfigured extensions for graphs, diagrams, and charts.
 
 
