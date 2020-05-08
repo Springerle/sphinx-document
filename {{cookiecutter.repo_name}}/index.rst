@@ -77,9 +77,14 @@ For various UML diagrams, use the `sphinxcontrib.plantuml extension`_.
     :caption: UML Diagram
     :align: center
 
+    @startuml
     Alice -> Bob: Hi!
     Alice <- Bob: How are you?
+    @enduml
+
+See `Using PlantUML`_ for more examples.
 
 
 .. _`sphinx.ext.graphviz extension`: https://www.sphinx-doc.org/en/master/usage/extensions/graphviz.html
 .. _`sphinxcontrib.plantuml extension`: https://github.com/sphinx-contrib/plantuml/#readme
+.. _`Using PlantUML`: https://build-me-the-docs-please.readthedocs.io/en/latest/Using_Sphinx/UsingGraphicsAndDiagramsInSphinx.html#using-plantuml
