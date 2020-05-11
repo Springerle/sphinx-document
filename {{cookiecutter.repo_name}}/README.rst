@@ -99,7 +99,7 @@ directory to the ``PATH`` after installing or unpacking.
 sphinxcontrib.plantuml
 ~~~~~~~~~~~~~~~~~~~~~~
 
-To install PlantUML, use these commands after you `downloaded plantuml.jar`_:
+To install `PlantUML`_, use these commands after you `downloaded plantuml.jar`_:
 
 .. code:: sh
 
@@ -114,3 +114,4 @@ To install PlantUML, use these commands after you `downloaded plantuml.jar`_:
 .. _`downloaded plantuml.jar`: https://plantuml.com/download
 .. _`GraphViz Windows packages`: https://graphviz.gitlab.io/_pages/Download/Download_windows.html
 .. _`GraphViz Homebrew Formula`: https://formulae.brew.sh/formula/graphviz
+.. _`PlantUML`: https://plantuml.com/
