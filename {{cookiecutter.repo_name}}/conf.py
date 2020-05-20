@@ -185,3 +185,4 @@ graphviz_output_format = 'svg'
 # -- PlantUML configuration ----------------------------------------------
 plantuml = os.path.expandvars('java -jar ${HOME}/.local/share/java/plantuml.jar')
 plantuml_output_format = 'svg'
+plantuml_syntax_error_image = True
