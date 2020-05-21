@@ -73,14 +73,8 @@ and thus node labels become clickable hyperlinks -- try it out below.
 
 For various UML diagrams, use the `sphinxcontrib.plantuml extension`_.
 
-.. uml::
-    :caption: UML Diagram
+.. uml:: uml/example.puml
     :align: center
-
-    @startuml
-    Alice -> Bob: Hi!
-    Alice <- Bob: How are you?
-    @enduml
 
 See `Using PlantUML`_ for more examples.
 

@@ -1,0 +1,16 @@
+@startuml
+title Sphinx rendering HTML with contained UML diagrams
+hide footbox
+
+collections "Document\nFiles" as docs
+control Sphinx as sphinx
+control PlantUML as puml
+database "Build Folder" as build
+
+docs <- sphinx : Parse
+sphinx -> build : Render HTML
+
+sphinx --> puml :  Call
+docs <- puml : Read UML markup
+puml -> build : Write SVG
+@enduml
