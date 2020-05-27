@@ -183,6 +183,11 @@ htmlhelp_basename = project + 'doc'
 graphviz_output_format = 'svg'
 
 # -- PlantUML configuration ----------------------------------------------
-plantuml = os.path.expandvars('java -jar ${HOME}/.local/share/java/plantuml.jar')
+if on_rtd:
+    # https://sphinxcontrib-needs.readthedocs.io/en/latest/installation.html#install-plantuml
+    plantuml = 'java -Djava.awt.headless=true -jar /usr/share/plantuml/plantuml.jar'
+else:
+    plantuml = os.path.expandvars('java -jar ${HOME}/.local/share/java/plantuml.jar')
+
 plantuml_output_format = 'svg'
 plantuml_syntax_error_image = True
