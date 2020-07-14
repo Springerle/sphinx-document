@@ -73,6 +73,10 @@ set the ``SPHINX_AUTOBUILD_PORT`` variable like this:
 
 The default port is ``8880``.
 
+For the watchdog management to work as intended, the``psmisc`` package
+must be installed (that is the package name on Debian-like systems,
+it is ``standard`` there and should thus be installed by default).
+
 
 Extension Setup Procedures
 --------------------------
