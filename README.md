@@ -22,7 +22,7 @@ Creating a new document is as easy as this:
 cookiecutter "https://github.com/Springerle/sphinx-document"
 ```
 
-You'll get asked a few questions, the project directory is created in the current workding directory based on your input.
+You'll get asked a few questions, the project directory is created in the current working directory based on your input.
 Commit the new project *unchanged* into a new git repository directly after that, before you build it or change anything – this is important to make later updates easier.
 
 If you use this often (more than once), it makes sense to copy manifest values as requested by ``cookiecutter.json``, like your name, to the ``default_context`` of your ``~/.cookiecutterrc``. This saves a lot of typing on project creation, and reduces typos.
